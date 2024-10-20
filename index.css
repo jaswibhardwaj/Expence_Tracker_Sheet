@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://assets.gqindia.com/photos/608c135f6e6a489a62cd254d/master/pass/Apps%20for%20finance%20management.jpg');
+  padding: 20px;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(99, 5, 5);
+}
+
+h2{
+  color: rgb(99, 5, 5);
+}
+#expense-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+
+#expense-form input, #expense-form select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#expense-form button {
+  grid-column: span 2;
+  padding: 10px;
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#expense-form button:hover {
+  background-color: brown;
+}
+
+#expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#expense-list li {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 50px;
+  background-color: #f8f8f8;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  gap: 10px;
+}
+
+#expense-list li span {
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+#expense-list button {
+  background-color: brown;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#expense-list button:hover {
+  background-color: brown;
+}
+
+h3 {
+  text-align: right;
+  margin-top: 20px;
+  color: rgb(99, 5, 5);;
+}
+/* Media quary for make it responsive */
+@media (max-width: 1200px) {
+  .container{
+    margin-top: 20px;
+  }
+  #expense-form {
+    grid-template-columns: 1fr; 
+  }
+  #expense-form input, #expense-form select {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 600px) {
+  
+  #expense-list button {
+    justify-self: center; 
+    width: 100px;
+  }
+
+  #expense-list li {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+
+@media (max-width: 900px) {
+  .container{
+    margin: auto;
+  }
+  #expense-form {
+    grid-template-columns: 1fr; 
+  }
+
+  #expense-form input, #expense-form select {
+    width: 100%; 
+  }
+
+  #expense-list li {
+    grid-template-columns: 1fr 1fr; 
+    grid-row-gap: 10px;
+  }
+
+  #expense-list li span {
+    text-align: left;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container{
+    margin: 40px 0px 40px 0px;
+  }
+  #expense-form {
+    grid-template-columns: 1fr; 
+  }
+
+  #expense-form input, #expense-form select {
+    width: 100%; 
+  }
+
+  #expense-list li {
+    grid-template-columns: 1fr 1fr; 
+    grid-row-gap: 10px; 
+    text-align: center; 
+  }
+
+  #expense-list li span {
+    text-align: left;
+  }
+  #expense-list li button {
+    justify-self: center;
+    margin-top: 10px; 
+    width: 100px; 
+  }
+}
